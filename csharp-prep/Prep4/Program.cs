@@ -19,5 +19,6 @@ class Program
         
         Console.WriteLine($"The sum is {numbers.Sum()}");
         Console.WriteLine($"The average is {numbers.Average()}");
+        Console.WriteLine($"The largest number in the list is {numbers.Max()}");
     }
 }
