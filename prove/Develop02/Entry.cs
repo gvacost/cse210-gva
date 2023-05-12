@@ -3,30 +3,31 @@ using System;
 
 public class Entry
 {
-    public string _rprompt, rprompt;
-    public string _datedata, datedata;
-    public string _prompt_response, prompt_response;
+    public string  rprompt;
+    public string  datedata;
+    public string  prompt_response;
 
-    public  Entry(string _rprompt, string _datedata, string _prompt_response)
+    public Entry(string _rprompt, string _datedata, string _prompt_response)
     {
-        rprompt = _prompt_response;
+        rprompt = _rprompt;
         datedata = _datedata;
         prompt_response = _prompt_response;
     }
-
-    public void DateData()
-
+    public string GetEntries()
     {
-        DateTime date = DateTime.Now;
-        _datedata = date.ToShortDateString();
-       
-    }
-    public void RandomPrompt()
-    {
-        PromptGen _rprompt_ = new PromptGen();
-        _rprompt_.GenPrompts();
-        _prompt_response = Console.ReadLine();
-    }
+        string entrie = ($"{datedata}-{rprompt}-{prompt_response}");
+        return entrie;
+    } 
+  public string EntryAsCSV()
+  {
+    return string.Format("{0}{1}{2}", datedata, rprompt, prompt_response);
+    
+
+  }
+    
+   
+
+ 
     public void DisplayEntry()
     {
         Console.WriteLine($"{datedata}-{prompt_response}");

@@ -4,9 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        Journal journal = new Journal();
         int _userselect = 0;
-        Journal mjournal = new Journal();
-          List<string> menu = new List<string>
+        List<string> menu = new List<string>
             {
                 "Please select one of the following choices:",
                 "1. Write",
@@ -25,13 +26,21 @@ class Program
                 _userselect = int.Parse(Console.ReadLine());
                 if (_userselect == 1)
                 {
-                    Entry prompt = new Entry( "","","");
-                    prompt.RandomPrompt();
+                    journal.CreatEntry();
+                
                 }
                 else if (_userselect == 2)
                 {
-                    Journal mjour = new Journal();
-                    mjour.Display();
+                    
+                    journal.Display();
+                }
+                else if (_userselect == 3)
+                {
+
+                }
+                else if (_userselect == 4)
+                {
+                    
                 }
             }    
         
