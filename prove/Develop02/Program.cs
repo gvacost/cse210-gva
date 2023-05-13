@@ -32,7 +32,7 @@ class Program
                 else if (_userselect == 2)
                 {
                     
-                    journal.Display();
+                    Journal.Display();
                 }
                 else if (_userselect == 3)
                 {
@@ -40,7 +40,7 @@ class Program
                 }
                 else if (_userselect == 4)
                 {
-                    
+                    journal.SaveToCSV();
                 }
             }    
         
