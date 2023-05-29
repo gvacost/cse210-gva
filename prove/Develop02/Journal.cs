@@ -43,13 +43,13 @@ public class Journal
 
       using (StreamWriter output = new StreamWriter(_filen))
       {
-            foreach (Entry entrie in entries)
-            {
-                output.WriteLine($"{entrie.datedata}-{entrie.rprompt}");
-                output.WriteLine(entrie.prompt_response);
-            }
-
+        foreach (Entry entrie in entries)
+        {
+            output.WriteLine($"{entrie.datedata}-{entrie.rprompt}");
+            output.WriteLine(entrie.prompt_response);
         }
+
+      }
       
     }
 
